@@ -1,0 +1,30 @@
+{
+  "name": "landing-decants",
+  "version": "1.0.0",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "deploy": "gh-pages -d public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/saulvl1024/landing-decants.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/saulvl1024/landing-decants/issues"
+  },
+  "homepage": "https://saulvl1024.github.io/landing-decants/",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^5.1.0",
+    "mongodb": "^6.17.0",
+    "mongoose": "^8.16.4"
+  },
+  "devDependencies": {
+    "gh-pages": "^6.3.0"
+  },
+  "description": ""
+}
