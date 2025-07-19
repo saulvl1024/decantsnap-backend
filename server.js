@@ -9,7 +9,7 @@ const authRoutes = require('./routes/auth.routes');
 const PORT = 3000;
 
 // Conexión a MongoDB Atlas
-mongoose.connect('mongodb+srv://saulvl2697:KyDLvHTCUKNZOXIk@decantsnapcluster.hh7wl54.mongodb.net/decantsdb?retryWrites=true&w=majority&appName=DecantSnapcluster', {
+mongoose.connect(process.env.MONGODB_URI, {
   useNewUrlParser: true,
   useUnifiedTopology: true
 })
@@ -22,10 +22,16 @@ app.use(cors({
   methods: ['GET', 'POST', 'DELETE', 'OPTIONS'],
   allowedHeaders: ['Content-Type']
 }));
+app.use(express.json()); // <--- ESTA LÍNEA ES CLAVE
+app.use(express.urlencoded({ extended: true }));
 app.use(bodyParser.json());
+
 app.use(express.static('public'));
 app.use('/img', express.static(path.join(__dirname, 'public/img')));
+
 app.use('/api/auth', authRoutes);
+
+
 
 // Modelo de producto
 const Producto = require('./models/producto');
