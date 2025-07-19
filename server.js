@@ -16,7 +16,7 @@ mongoose.connect('mongodb+srv://saulvl2697:KyDLvHTCUKNZOXIk@decantsnapcluster.hh
 
 // Middleware
 app.use(cors({
-  origin: ['http://localhost:5500', 'http://127.0.0.1:5500'],
+  origin: ['http://localhost:5500', 'http://127.0.0.1:5500', 'https://saulv11024.github.io'],
   methods: ['GET', 'POST', 'DELETE', 'OPTIONS'],
   allowedHeaders: ['Content-Type']
 }));
