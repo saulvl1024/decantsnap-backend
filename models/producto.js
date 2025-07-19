@@ -6,7 +6,7 @@ const productoSchema = new mongoose.Schema({
   descripcion: { type: String, required: true },
   imagenUrl: { type: String, required: true },
   notas: { type: [String], default: [] },
-  tipo: { type: String, required: true }, // "nicho", "disenador", etc.
+  tipo: { type: [String], required: true }, // "nicho", "disenador", etc.
   presentaciones: [
     {
       tamanio: { type: String, required: true }, // "5ml", "10ml"
