@@ -67,7 +67,16 @@ app.delete('/api/productos/:id', async (req, res) => {
     res.status(500).json({ error: 'Error al eliminar el producto' });
   }
 });
-
+// Actualizar producto por ID
+app.patch('/api/productos/:id', async (req, res) => {
+  try {
+    await Producto.findByIdAndUpdate(req.params.id, req.body);
+    res.json({ mensaje: 'Producto actualizado' });
+  } catch (err) {
+    console.error(err);
+    res.status(500).json({ error: 'Error al actualizar producto' });
+  }
+});
 // Iniciar el servidor
 app.listen(PORT, () => {
   console.log(`🚀 Servidor backend corriendo en http://localhost:${PORT}`);
