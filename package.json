@@ -4,7 +4,8 @@
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
-    "deploy": "gh-pages -d public"
+    "deploy": "gh-pages -d public",
+    "dev": "nodemon index.js"
   },
   "repository": {
     "type": "git",
@@ -18,13 +19,16 @@
   },
   "homepage": "https://saulvl1024.github.io/landing-decants/",
   "dependencies": {
+    "bcrypt": "^6.0.0",
     "cors": "^2.8.5",
+    "dotenv": "^17.2.0",
     "express": "^5.1.0",
     "mongodb": "^6.17.0",
     "mongoose": "^8.16.4"
   },
   "devDependencies": {
-    "gh-pages": "^6.3.0"
+    "gh-pages": "^6.3.0",
+    "nodemon": "^3.1.10"
   },
   "description": ""
 }

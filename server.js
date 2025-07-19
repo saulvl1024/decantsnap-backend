@@ -1,9 +1,11 @@
+require('dotenv').config();
 const express = require('express');
 const cors = require('cors');
 const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
 const path = require('path');
 const app = express();
+const authRoutes = require('./routes/auth.routes');
 const PORT = 3000;
 
 // Conexión a MongoDB Atlas
@@ -23,6 +25,8 @@ app.use(cors({
 app.use(bodyParser.json());
 app.use(express.static('public'));
 app.use('/img', express.static(path.join(__dirname, 'public/img')));
+app.use('/api/auth', authRoutes);
+
 // Modelo de producto
 const Producto = require('./models/producto');
 

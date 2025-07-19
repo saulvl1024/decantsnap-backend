@@ -1,0 +1,29 @@
+# Node modules
+node_modules/
+
+# Entorno / configuración privada
+.env
+
+# Logs
+logs
+*.log
+npm-debug.log*
+
+# Sistema operativo
+.DS_Store
+Thumbs.db
+
+# Editor config
+.vscode/
+.idea/
+
+# Producción (si lo usas)
+dist/
+build/
+
+# Archivos temporales
+*.tmp
+*.swp
+
+# Backend uploads (si guardas imágenes en disco local)
+uploads/
